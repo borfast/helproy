@@ -122,6 +122,8 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		// Custom
+		'Way\Generators\GeneratorsServiceProvider',
 	),
 
 	/*
