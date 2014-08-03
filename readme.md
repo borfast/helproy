@@ -1,6 +1,6 @@
 ## Help Roy
 
-[![Code Climate](https://codeclimate.com/github/borfast/helproy/badges/gpa.svg)](https://codeclimate.com/github/borfast/helproy)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/borfast/helproy/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/borfast/helproy/?branch=master)
 
 Help Roy is an open source animal adoption platform.
 
