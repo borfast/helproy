@@ -122,8 +122,11 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-		// Custom
+		// Third-Party
 		'Way\Generators\GeneratorsServiceProvider',
+
+		// HelpRoy
+		'HelpRoy\Storage\StorageServiceProvider'
 	),
 
 	/*
