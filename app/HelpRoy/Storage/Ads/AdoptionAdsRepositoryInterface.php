@@ -3,20 +3,20 @@
 namespace HelpRoy\Storage\Ads;
 
 /**
- * Allows access and manipulation of found ads entities.
+ * Allows access and manipulation of adoption ads entities.
  */
-interface FoundAdRepositoryInterface
+interface AdoptionAdsRepositoryInterface
 {	
 	/**
-	 * Returns an individual found ad based on id.
+	 * Returns an individual adoption ad based on id.
 	 * 
-	 * @param  int $id The id of the desired found ad.
+	 * @param  int $id The id of the desired adoption ad.
 	 * @return HelpRoy\Storage\Ads\Ad
 	 */
 	public function find($id);
 
 	/**
-	 * Retrivies all found ads.
+	 * Retrivies all adoption ads.
 	 * 
 	 * @return Illuminate\Database\Eloquent\Collection
 	 */
@@ -25,7 +25,7 @@ interface FoundAdRepositoryInterface
 	/**
 	 * Creates a new ad.
 	 * 
-	 * @param  array $attributes Found Ad entity attributes.
+	 * @param  array $attributes Adoption Ad entity attributes.
 	 * @return HelpRoy\Storage\Ads\Ad
 	 */
 	public function create(array $attributes = []);

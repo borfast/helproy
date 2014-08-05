@@ -5,7 +5,7 @@ namespace HelpRoy\Storage\Users;
 /**
  * Allows access and manipulation of user entities.
  */
-interface UserRepositoryInterface
+interface UsersRepositoryInterface
 {	
 	/**
 	 * Returns an individual user based on id.

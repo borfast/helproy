@@ -5,7 +5,7 @@ namespace HelpRoy\Storage\Ads;
 /**
  * Allows access and manipulation of lost ads entities.
  */
-interface LostAdRepositoryInterface
+interface LostAdsRepositoryInterface
 {	
 	/**
 	 * Returns an individual lost ad based on id.
