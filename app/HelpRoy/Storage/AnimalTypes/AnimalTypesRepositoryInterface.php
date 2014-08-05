@@ -5,7 +5,7 @@ namespace HelpRoy\Storage\AnimalTypes;
 /**
  * Allows access and manipulation of animal type entities.
  */
-interface AnimalTypesRepositoryInterface 
+interface AnimalTypesRepositoryInterface
 {	
 	/**
 	 * Returns an individual animal type based on id.
@@ -23,7 +23,7 @@ interface AnimalTypesRepositoryInterface
 	public function all();
 
 	/**
-	 * Create a new animal type.
+	 * Creates a new animal type.
 	 * 
 	 * @param  string $name The name of the new animal type.
 	 * @return HelpRoy\Storage\AnimalTypes\AnimalType

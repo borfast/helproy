@@ -23,8 +23,13 @@ interface ContactsRepositoryInterface
 	public function all();
 
 	/**
+<<<<<<< Updated upstream:app/HelpRoy/Storage/Contacts/ContactsRepositoryInterface.php
 	 * Create a new contact.
 	 *
+=======
+	 * Creates a new contact.
+	 * 
+>>>>>>> Stashed changes:app/HelpRoy/Storage/Contacts/ContactRepositoryInterface.php
 	 * @param  array $attributes Contact entity attributes.
 	 * @return HelpRoy\Storage\Contacts\Contact
 	 */

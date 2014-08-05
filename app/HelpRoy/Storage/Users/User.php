@@ -1,5 +1,7 @@
 <?php
 
+namespace HelpRoy\Storage\Users;
+
 use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
@@ -23,6 +25,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password', 'remember_token');
 
+	/**
+	 * Allows access to user's contacts.
+	 * @return Illuminate\Database\Eloquent\Collection
+	 */
 	public function contacts()
 	{
 		return $this->hasMany('Contact');
