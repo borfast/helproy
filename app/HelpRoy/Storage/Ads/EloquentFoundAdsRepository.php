@@ -28,7 +28,7 @@ class EloquentFoundAdsRepository implements FoundAdsRepositoryInterface
      */
     public function create($attributes)
     {
-        $animal_type = FoundAd::create($attributes);
-        return $animal_type;
+        $ad = FoundAd::create($attributes);
+        return $ad;
     }
 }
