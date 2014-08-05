@@ -12,7 +12,7 @@ class EloquentAnimalTypesRepository implements AnimalTypesRepositoryInterface
      */
     public function find($id)
     {
-        return AnimalTypes::find($id);
+        return AnimalType::find($id);
     }
 
     /**
@@ -20,7 +20,7 @@ class EloquentAnimalTypesRepository implements AnimalTypesRepositoryInterface
      */
     public function all()
     {
-        return AnimalTypes::all();
+        return AnimalType::all();
     }
 
     /**
