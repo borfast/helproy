@@ -15,3 +15,8 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::group(['prefix' => 'contacts'], function() {
+	Route::model('contact', 'HelpRoy\Storage\Contacts\Contact');
+	Route::get('show/{contact}', ['uses' => 'ContactsController@show']);
+});
