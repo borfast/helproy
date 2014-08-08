@@ -76,12 +76,14 @@ class InitialTables extends Migration {
 		});
 
 		Schema::create('adoption_ads', function($table) {
+			$table->increments('id');
 			$table->integer('ad_id')->unsigned();
 			$table->foreign('ad_id')->references('id')->on('ads');
 			$table->timestamps();
 		});
 
 		Schema::create('lost_ads', function($table) {
+			$table->increments('id');
 			$table->integer('ad_id')->unsigned();
 			$table->foreign('ad_id')->references('id')->on('ads');
 			$table->text('place');
@@ -91,6 +93,7 @@ class InitialTables extends Migration {
 		});
 
 		Schema::create('found_ads', function($table) {
+			$table->increments('id');
 			$table->integer('ad_id')->unsigned();
 			$table->foreign('ad_id')->references('id')->on('ads');
 			$table->text('place');
