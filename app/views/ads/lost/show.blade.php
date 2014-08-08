@@ -1,0 +1,1 @@
+{{$lostAd->place}}

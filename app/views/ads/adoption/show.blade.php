@@ -1,0 +1,1 @@
+{{$adoptionAd->ad_id}}
