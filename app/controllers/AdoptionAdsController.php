@@ -1,11 +1,11 @@
 <?php
 
-use HelpRoy\Storage\Contacts\Contact;
-use HelpRoy\Storage\Contacts\ContactsRepositoryInterface;
+use HelpRoy\Storage\Ads\AdoptionAd;
+use HelpRoy\Storage\Ads\AdoptionAdsRepositoryInterface;
 
-class ContactsController extends \BaseController {
+class AdoptionAdsController extends \BaseController {
 
-	public function __construct(ContactsRepositoryInterface $repository)
+	public function __construct(AdoptionAdsRepositoryInterface $repository)
 	{
 		$this->repository = $repository;
 	}
@@ -47,12 +47,12 @@ class ContactsController extends \BaseController {
 	 * Display the specified resource.
 	 * GET /contacts/{id}
 	 *
-	 * @param  Contact 	$contact
+	 * @param  AdoptionAd $adoptionAd
 	 * @return Response
 	 */
-	public function show(Contact $contact)
+	public function show(AdoptionAd $adoptionAd)
 	{
-		return View::make('contacts/show', array('contact' => $contact));
+		return View::make('ads/adoption/show', array('adoptionAd' => $adoptionAd));
 	}
 
 	/**

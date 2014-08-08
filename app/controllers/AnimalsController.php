@@ -1,11 +1,11 @@
 <?php
 
-use HelpRoy\Storage\Contacts\Contact;
-use HelpRoy\Storage\Contacts\ContactsRepositoryInterface;
+use HelpRoy\Storage\Animals\Animal;
+use HelpRoy\Storage\Animals\AnimalsRepositoryInterface;
 
-class ContactsController extends \BaseController {
+class AnimalsController extends \BaseController {
 
-	public function __construct(ContactsRepositoryInterface $repository)
+	public function __construct(AnimalsRepositoryInterface $repository)
 	{
 		$this->repository = $repository;
 	}
@@ -47,12 +47,12 @@ class ContactsController extends \BaseController {
 	 * Display the specified resource.
 	 * GET /contacts/{id}
 	 *
-	 * @param  Contact 	$contact
+	 * @param  Animal  	$animal
 	 * @return Response
 	 */
-	public function show(Contact $contact)
+	public function show(Animal $animal)
 	{
-		return View::make('contacts/show', array('contact' => $contact));
+		return View::make('animals/show', array('animal' => $animal));
 	}
 
 	/**

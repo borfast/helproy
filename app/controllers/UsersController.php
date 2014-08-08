@@ -1,11 +1,11 @@
 <?php
 
-use HelpRoy\Storage\Contacts\Contact;
-use HelpRoy\Storage\Contacts\ContactsRepositoryInterface;
+use HelpRoy\Storage\Users\User;
+use HelpRoy\Storage\Users\UsersRepositoryInterface;
 
-class ContactsController extends \BaseController {
+class UsersController extends \BaseController {
 
-	public function __construct(ContactsRepositoryInterface $repository)
+	public function __construct(UsersRepositoryInterface $repository)
 	{
 		$this->repository = $repository;
 	}
@@ -47,12 +47,12 @@ class ContactsController extends \BaseController {
 	 * Display the specified resource.
 	 * GET /contacts/{id}
 	 *
-	 * @param  Contact 	$contact
+	 * @param  User 	$user
 	 * @return Response
 	 */
-	public function show(Contact $contact)
+	public function show(User $user)
 	{
-		return View::make('contacts/show', array('contact' => $contact));
+		return View::make('users/show', array('user' => $user));
 	}
 
 	/**
