@@ -1,8 +1,9 @@
 <?php
-namespace HelpRoy\Storage\AnimalTypes;
+
+namespace HelpRoy\Storage\Ads;
 
 /**
-* Allows interacting with AnimalTypes.
+* Allows interacting with FoundAds.
 *
 */
 class EloquentFoundAdsRepository implements FoundAdsRepositoryInterface
@@ -26,7 +27,7 @@ class EloquentFoundAdsRepository implements FoundAdsRepositoryInterface
     /**
      * {@inheritdoc}
      */
-    public function create($attributes)
+    public function create(array $attributes = [])
     {
         $ad = FoundAd::create($attributes);
         return $ad;

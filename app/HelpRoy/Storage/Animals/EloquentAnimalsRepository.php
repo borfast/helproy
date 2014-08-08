@@ -26,9 +26,9 @@ class EloquentAnimalsRepository implements AnimalsRepositoryInterface
     /**
      * {@inheritdoc}
      */
-    public function create($name)
+    public function create(array $attributes = [])
     {
-        $animal_type = Animal::create(['name' => $name]);
+        $animal_type = Animal::create($attributes);
         return $animal_type;
     }
 }

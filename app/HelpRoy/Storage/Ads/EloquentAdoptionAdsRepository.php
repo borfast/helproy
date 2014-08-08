@@ -26,7 +26,7 @@ class EloquentAdoptionAdsRepository implements AdoptionAdsRepositoryInterface
     /**
      * {@inheritdoc}
      */
-    public function create(array $attributes)
+    public function create(array $attributes = [])
     {
         $adoptionAd = AdoptionAd::create($attributes);
         

@@ -1,8 +1,9 @@
 <?php
-namespace HelpRoy\Storage\AnimalTypes;
+
+namespace HelpRoy\Storage\Ads;
 
 /**
-* Allows interacting with AnimalTypes.
+* Allows interacting with LostAds.
 *
 */
 class EloquentLostAdsRepository implements LostAdsRepositoryInterface
@@ -26,7 +27,7 @@ class EloquentLostAdsRepository implements LostAdsRepositoryInterface
     /**
      * {@inheritdoc}
      */
-    public function create($attributes)
+    public function create(array $attributes = [])
     {
         $ad = LostAd::create($attributes);
         return $ad;

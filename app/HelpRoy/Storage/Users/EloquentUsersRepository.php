@@ -26,7 +26,7 @@ class EloquentUsersRepository implements UsersRepositoryInterface
     /**
      * {@inheritdoc}
      */
-    public function create(array $attributes)
+    public function create(array $attributes = [])
     {
         $user = User::create($attributes);
         

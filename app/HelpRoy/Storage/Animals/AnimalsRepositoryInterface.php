@@ -5,7 +5,7 @@ namespace HelpRoy\Storage\Animals;
 /**
  * Allows access and manipulation of animal entities.
  */
-interface AnimalRepositoryInterface
+interface AnimalsRepositoryInterface
 {
     /**
      * Returns an individual animal based on id.
