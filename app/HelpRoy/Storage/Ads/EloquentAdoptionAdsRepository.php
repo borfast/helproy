@@ -29,7 +29,7 @@ class EloquentAdoptionAdsRepository implements AdoptionAdsRepositoryInterface
     public function create(array $attributes = [])
     {
         $adoptionAd = AdoptionAd::create($attributes);
-        
+
         return $adoptionAd;
     }
 }
