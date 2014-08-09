@@ -124,6 +124,7 @@ return array(
 
         // Third-Party
         'Way\Generators\GeneratorsServiceProvider',
+        'Barryvdh\Debugbar\ServiceProvider',
 
         // HelpRoy
         'HelpRoy\Storage\StorageServiceProvider'

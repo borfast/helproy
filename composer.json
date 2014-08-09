@@ -4,7 +4,8 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+		"barryvdh/laravel-debugbar": "1.*"
 	},
 	"require-dev": {
 		"way/generators": "2.*"
@@ -18,16 +19,18 @@
 			"app/tests/TestCase.php"
 		],
 		"psr-4": {
-			"HelpRoy\\": "app/HelpRoy/" 
+			"HelpRoy\\": "app/HelpRoy/"
 		}
 	},
 	"scripts": {
 		"post-install-cmd": [
 			"php artisan clear-compiled",
+			"php artisan debugbar:publish",
 			"php artisan optimize"
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
+			"php artisan debugbar:publish",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
