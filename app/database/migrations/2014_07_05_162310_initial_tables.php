@@ -28,6 +28,7 @@ class InitialTables extends Migration
         Schema::create('animal_types', function ($table) {
             $table->increments('id');
             $table->string('name', 20);
+            $table->timestamps();
         });
 
         Schema::create('animals', function ($table) use ($colors) {
