@@ -6,6 +6,8 @@ class AdoptionAd extends \Eloquent
 {
     protected $fillable = [];
 
+    protected $primaryKey = 'ad_id';
+
     /**
      * Allows access to the main ad data related with this ad.
      * @return Illuminate\Database\Eloquent\Relations\BelongsTo
