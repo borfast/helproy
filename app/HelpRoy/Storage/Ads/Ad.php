@@ -7,7 +7,7 @@ class Ad extends \Eloquent {
 
 	/**
 	 * Allows access to the data associated with the lost ad.
-	 * 			
+	 *
 	 * @return Illuminate\Database\Eloquent\Relations\HasOne
 	 */
 	public function lostAd()
@@ -17,7 +17,7 @@ class Ad extends \Eloquent {
 
 	/**
 	 * Allows access to the data associated with the found ad.
-	 * 			
+	 *
 	 * @return Illuminate\Database\Eloquent\Relations\HasOne
 	 */
 	public function foundAd()
@@ -27,7 +27,7 @@ class Ad extends \Eloquent {
 
 	/**
 	 * Allows access to the data associated with the adoption ad.
-	 * 			
+	 *
 	 * @return Illuminate\Database\Eloquent\Relations\HasOne
 	 */
 	public function adoptionAd()

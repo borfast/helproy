@@ -4,7 +4,11 @@ namespace HelpRoy\Storage\Ads;
 
 class FoundAd extends \Eloquent
 {
-    protected $fillable = [];
+    protected $fillable = [
+        "place",
+        "found_date",
+        "coordinates",
+    ];
 
     protected $primaryKey = 'ad_id';
 

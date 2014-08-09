@@ -4,7 +4,11 @@ namespace HelpRoy\Storage\Ads;
 
 class LostAd extends \Eloquent
 {
-    protected $fillable = [];
+    protected $fillable = [
+        "place",
+        "lost_date",
+        "coordinates",
+    ];
 
     protected $primaryKey = 'ad_id';
 

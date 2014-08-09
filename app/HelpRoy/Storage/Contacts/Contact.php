@@ -4,7 +4,12 @@ namespace HelpRoy\Storage\Contacts;
 
 class Contact extends \Eloquent
 {
-    protected $fillable = [];
+    protected $fillable = [
+        "name",
+        "address",
+        "phone",
+        "user_id"
+    ];
 
     /**
      * Allows access to user who owns this contact.
