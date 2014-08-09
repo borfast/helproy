@@ -27,20 +27,17 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment(function () use ($app) {
     $env = 'local';
 
-	if (isset($_SERVER['HELPROY_ENV']))
-	{
-		$env = $_SERVER['HELPROY_ENV'];
-	}
-	else
-	{
-		$envs = [
-			'local' => array('homestead', 'local.helproy.com'),
-		];
+    if (isset($_SERVER['HELPROY_ENV'])) {
+        $env = $_SERVER['HELPROY_ENV'];
+    } else {
+        $envs = [
+            'local' => array('homestead', 'local.helproy.com'),
+        ];
 
-		$env = $app->detectEnvironment($envs);
-	}
+        $env = $app->detectEnvironment($envs);
+    }
 
-	return $env;
+    return $env;
 });
 
 /*
