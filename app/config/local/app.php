@@ -14,4 +14,6 @@ return array(
     */
 
     'debug' => true,
+
+    'url' => 'http://local.helproy.com',
 );
