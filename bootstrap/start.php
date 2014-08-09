@@ -27,9 +27,9 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment(function () use ($app) {
     $env = 'local';
 
-	if (isset($_SERVER['LARAVEL_ENV']))
+	if (isset($_SERVER['HELPROY_ENV']))
 	{
-		$env = $_SERVER['LARAVEL_ENV'];
+		$env = $_SERVER['HELPROY_ENV'];
 	}
 	else
 	{
