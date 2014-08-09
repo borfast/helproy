@@ -2,15 +2,16 @@
 
 namespace HelpRoy\Storage\Ads;
 
-class FoundAd extends \Eloquent {
-	protected $fillable = [];
+class FoundAd extends \Eloquent
+{
+    protected $fillable = [];
 
-	/**
-	 * Allows access to the main ad data related with this ad.
-	 * @return Illuminate\Database\Eloquent\Relations\BelongsTo
-	 */
-	public function ad()
-	{
-		return $this->belongsTo('Ad');
-	}
+    /**
+     * Allows access to the main ad data related with this ad.
+     * @return Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function ad()
+    {
+        return $this->belongsTo('Ad');
+    }
 }

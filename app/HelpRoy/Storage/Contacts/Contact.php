@@ -8,7 +8,7 @@ class Contact extends \Eloquent
 
     /**
      * Allows access to user who owns this contact.
-     * 
+     *
      * @return Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user()
