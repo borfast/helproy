@@ -24,11 +24,24 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
+$env = $app->detectEnvironment(function () use ($app) {
+    $env = 'local';
 
-    'local' => array('homestead', 'local.helproy.com'),
+	if (isset($_SERVER['LARAVEL_ENV']))
+	{
+		$env = $_SERVER['LARAVEL_ENV'];
+	}
+	else
+	{
+		$envs = [
+			'local' => array('homestead', 'local.helproy.com'),
+		];
 
-));
+		$env = $app->detectEnvironment($envs);
+	}
+
+	return $env;
+});
 
 /*
 |--------------------------------------------------------------------------
