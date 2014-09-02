@@ -1,35 +1,42 @@
 <?php
+
 namespace HelpRoy\Storage\Ads;
 
 /**
 * Allows interacting with AdoptionAds.
 *
 */
-class EloquentAdoptionAdsRepository implements AdoptionAdsRepositoryInterface
+class EloquentAdoptionAdsRepository extends AbstractEloquentRepository implements AdoptionAdsRepositoryInterface
 {
     /**
-     * {@inheritdoc}
+     * The Ads repository we'll use.
+     *
+     * @var AdsRepositoryInterface
      */
-    public function find($id)
-    {
-        return AdoptionAd::find($id);
-    }
+    protected $ads;
+
 
     /**
-     * {@inheritdoc}
+     * Constructor
+     *
+     * @param AdoptionAd $model An instance of the model we'll be operating on.
      */
-    public function all()
+    public function __construct(AdoptionAd $model, AdsRepositoryInterface $ads)
     {
-        return AdoptionAd::all();
+        $this->model = $model;
+        $this->ads = $ads;
     }
+
 
     /**
      * {@inheritdoc}
      */
     public function create(array $attributes = [])
     {
-        $adoptionAd = AdoptionAd::create($attributes);
+        $parent_ad = $this->ads->create($attributes);
+        $attributes['ad_id'] = $parent_ad->id;
+        $adoption_ad = $this->model->create($attributes);
 
-        return $adoptionAd;
+        return $adoption_ad;
     }
 }

@@ -1,34 +1,31 @@
 <?php
+
 namespace HelpRoy\Storage\Contacts;
 
 /**
 * Allows interacting with Contacts.
 *
 */
-class EloquentContactsRepository implements ContactsRepositoryInterface
+class EloquentContactsRepository extends AbstractEloquentRepository implements ContactsRepositoryInterface
 {
     /**
-     * {@inheritdoc}
+     * Constructor
+     *
+     * @param Contact $model An instance of the model we'll be operating on.
      */
-    public function find($id)
+    public function __construct(Contact $model)
     {
-        return Contacts::find($id);
+        $this->model = $model;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function all()
-    {
-        return Contacts::all();
-    }
 
     /**
      * {@inheritdoc}
      */
     public function create(array $attributes = [])
     {
-        $contact = Contacts::create($attributes);
+        $contact = $this->model->create($attributes);
+
         return $contact;
     }
 }

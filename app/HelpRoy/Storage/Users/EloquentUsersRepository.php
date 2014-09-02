@@ -1,35 +1,31 @@
 <?php
+
 namespace HelpRoy\Storage\Users;
 
 /**
 * Allows interacting with Users.
 *
 */
-class EloquentUsersRepository implements UsersRepositoryInterface
+class EloquentUsersRepository extends AbstractEloquentRepository implements UsersRepositoryInterface
 {
     /**
-     * {@inheritdoc}
+     * Constructor
+     *
+     * @param User $model An instance of the model we'll be operating on.
      */
-    public function find($id)
+    public function __construct(User $model)
     {
-        return User::find($id);
+        $this->model = $model;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function all()
-    {
-        return User::all();
-    }
 
     /**
      * {@inheritdoc}
      */
     public function create(array $attributes = [])
     {
-        $user = User::create($attributes);
-        
+        $user = $this->model->create($attributes);
+
         return $user;
     }
 }

@@ -6,30 +6,26 @@ namespace HelpRoy\Storage\Ads;
 * Allows interacting with FoundAds.
 *
 */
-class EloquentFoundAdsRepository implements FoundAdsRepositoryInterface
+class EloquentFoundAdsRepository extends AbstractEloquentRepository implements FoundAdsRepositoryInterface
 {
     /**
-     * {@inheritdoc}
+     * Constructor
+     *
+     * @param FoundAd $model An instance of the model we'll be operating on.
      */
-    public function find($id)
+    public function __construct(FoundAd $model)
     {
-        return FoundAd::find($id);
+        $this->model = $model;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function all()
-    {
-        return FoundAd::all();
-    }
 
     /**
      * {@inheritdoc}
      */
     public function create(array $attributes = [])
     {
-        $ad = FoundAd::create($attributes);
+        $ad = $this->model->create($attributes);
+
         return $ad;
     }
 }

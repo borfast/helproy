@@ -6,30 +6,26 @@ namespace HelpRoy\Storage\Ads;
 * Allows interacting with LostAds.
 *
 */
-class EloquentLostAdsRepository implements LostAdsRepositoryInterface
+class EloquentLostAdsRepository extends AbstractEloquentRepository implements LostAdsRepositoryInterface
 {
     /**
-     * {@inheritdoc}
+     * Constructor
+     *
+     * @param LostAd $model An instance of the model we'll be operating on.
      */
-    public function find($id)
+    public function __construct(LostAd $model)
     {
-        return LostAd::find($id);
+        $this->model = $model;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function all()
-    {
-        return LostAd::all();
-    }
 
     /**
      * {@inheritdoc}
      */
     public function create(array $attributes = [])
     {
-        $ad = LostAd::create($attributes);
+        $ad = $this->model->create($attributes);
+
         return $ad;
     }
 }

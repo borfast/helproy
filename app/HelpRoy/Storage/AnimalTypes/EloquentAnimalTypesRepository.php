@@ -1,34 +1,31 @@
 <?php
+
 namespace HelpRoy\Storage\AnimalTypes;
 
 /**
 * Allows interacting with AnimalTypes.
 *
 */
-class EloquentAnimalTypesRepository implements AnimalTypesRepositoryInterface
+class EloquentAnimalTypesRepository extends AbstractEloquentRepository implements AnimalTypesRepositoryInterface
 {
     /**
-     * {@inheritdoc}
+     * Constructor
+     *
+     * @param AnimalType $model An instance of the model we'll be operating on.
      */
-    public function find($id)
+    public function __construct(AnimalType $model)
     {
-        return AnimalType::find($id);
+        $this->model = $model;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function all()
-    {
-        return AnimalType::all();
-    }
 
     /**
      * {@inheritdoc}
      */
     public function create($name)
     {
-        $animal_type = AnimalType::create(['name' => $name]);
+        $animal_type = $this->model->create(['name' => $name]);
+
         return $animal_type;
     }
 }
