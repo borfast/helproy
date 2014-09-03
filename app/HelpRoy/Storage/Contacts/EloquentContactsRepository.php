@@ -2,6 +2,8 @@
 
 namespace HelpRoy\Storage\Contacts;
 
+use HelpRoy\Storage\AbstractEloquentRepository;
+
 /**
 * Allows interacting with Contacts.
 *

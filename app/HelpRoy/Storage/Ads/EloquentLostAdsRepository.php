@@ -2,6 +2,8 @@
 
 namespace HelpRoy\Storage\Ads;
 
+use HelpRoy\Storage\AbstractEloquentRepository;
+
 /**
 * Allows interacting with LostAds.
 *

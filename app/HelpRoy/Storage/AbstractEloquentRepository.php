@@ -5,6 +5,13 @@ namespace HelpRoy\Storage;
 abstract class AbstractEloquentRepository
 {
     /**
+     * The model instance we will operate on.
+     * @var Illuminate\Database\Eloquent\Model;
+     */
+    protected $model;
+
+
+    /**
      * Return all models.
      *
      * @return Illuminate\Database\Eloquent\Collection

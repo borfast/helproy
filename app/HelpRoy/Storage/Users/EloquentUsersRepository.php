@@ -2,6 +2,8 @@
 
 namespace HelpRoy\Storage\Users;
 
+use HelpRoy\Storage\AbstractEloquentRepository;
+
 /**
 * Allows interacting with Users.
 *

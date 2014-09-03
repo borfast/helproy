@@ -2,6 +2,8 @@
 
 namespace HelpRoy\Storage\Animals;
 
+use HelpRoy\Storage\AbstractEloquentRepository;
+
 /**
 * Allows interacting with AnimalTypes.
 *
