@@ -19,15 +19,4 @@ class EloquentContactsRepository extends AbstractEloquentRepository implements C
     {
         $this->model = $model;
     }
-
-
-    /**
-     * {@inheritdoc}
-     */
-    public function create(array $attributes = [])
-    {
-        $contact = $this->model->create($attributes);
-
-        return $contact;
-    }
 }

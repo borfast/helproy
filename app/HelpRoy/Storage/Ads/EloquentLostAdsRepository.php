@@ -19,15 +19,4 @@ class EloquentLostAdsRepository extends AbstractEloquentRepository implements Lo
     {
         $this->model = $model;
     }
-
-
-    /**
-     * {@inheritdoc}
-     */
-    public function create(array $attributes = [])
-    {
-        $ad = $this->model->create($attributes);
-
-        return $ad;
-    }
 }

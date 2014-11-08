@@ -19,15 +19,4 @@ class EloquentUsersRepository extends AbstractEloquentRepository implements User
     {
         $this->model = $model;
     }
-
-
-    /**
-     * {@inheritdoc}
-     */
-    public function create(array $attributes = [])
-    {
-        $user = $this->model->create($attributes);
-
-        return $user;
-    }
 }
