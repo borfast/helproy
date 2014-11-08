@@ -1,0 +1,11 @@
+default:
+    path:
+        directory: app
+        extensions: php
+        exclude: tests|views|spec|lang
+
+    logging:
+        report:
+            html:   ./phpmetricslog/phpmetrics.html
+        violations:
+            xml:    ./phpmetricslog/violations.xml
