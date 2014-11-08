@@ -1,7 +1,8 @@
 <?php
 
-// Composer: "fzaninotto/faker": "v1.3.0"
 use Faker\Factory as Faker;
+use Illuminate\Database\Seeder;
+use HelpRoy\Storage\Contacts\Contact;
 
 class ContactsTableSeeder extends Seeder
 {

@@ -1,9 +1,8 @@
 <?php
 
-use HelpRoy\Storage\Animals\Animal;
-
-// Composer: "fzaninotto/faker": "v1.3.0"
 use Faker\Factory as Faker;
+use Illuminate\Database\Seeder;
+use HelpRoy\Storage\Animals\Animal;
 
 class AnimalsTableSeeder extends Seeder
 {
