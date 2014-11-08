@@ -19,4 +19,16 @@ class EloquentFoundAdsRepository extends AbstractEloquentRepository implements F
     {
         $this->model = $model;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function create(array $attributes = [])
+    {
+        $parent_ad = $this->ads->create($attributes);
+        $attributes['ad_id'] = $parent_ad->id;
+        $found_ad = $this->model->create($attributes);
+
+        return $found_ad;
+    }
 }
