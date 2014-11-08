@@ -43,7 +43,7 @@ class InitialTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('users', function ($table) {
+        /*Schema::create('users', function ($table) {
             $table->increments('id');
             $table->string('username');
             $table->string('email');
@@ -52,7 +52,7 @@ class InitialTables extends Migration
             $table->boolean('confirmed')->default(false);
             $table->string('remember_token')->nullable();
             $table->timestamps();
-        });
+        });*/
 
         Schema::create('contacts', function ($table) {
             $table->increments('id');
@@ -116,6 +116,6 @@ class InitialTables extends Migration
         Schema::drop('animals');
         Schema::drop('animal_types');
         Schema::drop('contacts');
-        Schema::drop('users');
+        // Schema::drop('users');
     }
 }

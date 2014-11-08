@@ -125,6 +125,7 @@ return array(
         // Third-Party
         'Way\Generators\GeneratorsServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
+        'Zizaco\Confide\ServiceProvider',
 
         // HelpRoy
         'HelpRoy\Storage\StorageServiceProvider'
@@ -195,6 +196,8 @@ return array(
         'Validator'       => 'Illuminate\Support\Facades\Validator',
         'View'            => 'Illuminate\Support\Facades\View',
 
+        // Third-Party
+        'Confide'    => 'Zizaco\Confide\Facade',
     ),
 
 );
