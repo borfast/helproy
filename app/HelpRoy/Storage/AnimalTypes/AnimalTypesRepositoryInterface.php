@@ -25,8 +25,8 @@ interface AnimalTypesRepositoryInterface
     /**
      * Creates a new animal type.
      *
-     * @param  string $name The name of the new animal type.
+     * @param array $attributes
      * @return HelpRoy\Storage\AnimalTypes\AnimalType
      */
-    public function create($name);
+    public function create(array $attributes = []);
 }
