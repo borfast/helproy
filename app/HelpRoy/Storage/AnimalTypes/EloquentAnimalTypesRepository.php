@@ -19,15 +19,4 @@ class EloquentAnimalTypesRepository extends AbstractEloquentRepository implement
     {
         $this->model = $model;
     }
-
-
-    /**
-     * {@inheritdoc}
-     */
-    public function create($name)
-    {
-        $animal_type = $this->model->create(['name' => $name]);
-
-        return $animal_type;
-    }
 }
