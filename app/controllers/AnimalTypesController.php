@@ -18,7 +18,9 @@ class AnimalTypesController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		$animal_types = $this->repository->all();
+
+        return View::make('animal_types/list', compact('animal_types'));
 	}
 
 	/**

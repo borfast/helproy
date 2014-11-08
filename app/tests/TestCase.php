@@ -1,6 +1,22 @@
 <?php
 
-class TestCase extends Illuminate\Foundation\Testing\TestCase {
+use Illuminate\Support\Facades\Artisan;
+
+class TestCase extends Illuminate\Foundation\Testing\TestCase
+{
+
+    public function setUp()
+    {
+        parent::setUp();
+        Artisan::call('migrate');
+        $this->seed();
+    }
+
+    public function tearDown()
+    {
+        parent::tearDown();
+        Artisan::call('migrate:reset');
+    }
 
 	/**
 	 * Creates the application.

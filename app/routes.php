@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
-
 Route::get('/', function () {
     return View::make('hello');
 });
@@ -26,9 +15,12 @@ Route::group(['prefix' => 'animals'], function () {
 });
 
 Route::group(['prefix' => 'animaltypes'], function () {
-    Route::model('animaltypes', 'HelpRoy\Storage\AnimalTypes\AnimalType');
-    Route::get('show/{animaltypes}', ['uses' => 'AnimalTypesController@show']);
+//    Route::model('animaltype', 'HelpRoy\Storage\AnimalTypes\AnimalType');
+//    Route::get('show/{animaltype}', ['uses' => 'AnimalTypesController@show']);
+//    Route::get('list', ['uses' => 'AnimalTypesController@list']);
+
 });
+Route::resource('animaltypes', 'AnimalTypesController');
 
 Route::group(['prefix' => 'users'], function () {
     Route::model('user', 'HelpRoy\Storage\Users\User');
