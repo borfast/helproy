@@ -7,4 +7,6 @@ Help Roy is an open source animal adoption platform.
 
 The idea started out of frustration when one of the authors couldn't save a dog from dying of illness, despite his best efforts.
 
-More information soon.
+The goal is to use TDD as much as possible for this, and some Domain Driven Design principles by separating the application code into different layers. This is obviously not a project for a client who has a domain expert to drive the domain model creation but it's still a good practice and with time we can get feedback from people who use the application and refactor whatever we feel is necessary.
+
+More information coming soon...ish - hey, don't complain, this is a side project from a couple of guys who are extremely busy :)
